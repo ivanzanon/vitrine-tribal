@@ -1,2 +1,2 @@
 # vitrine-tribal
-A course platform for Tribal Fusion Dance
+A platform for hosting Tribal Fusion Dance classes.
