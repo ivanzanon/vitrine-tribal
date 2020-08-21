@@ -1,0 +1,109 @@
+
+.main-content-container .dancers-container{
+    width: 100%;
+
+    margin-top: -5rem;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.main-content-container .dancers-container .dancer-left-container img {
+    height: 44.8rem;
+    opacity: 35%;
+    transition: 0.2s;
+}
+
+.main-content-container .dancers-container .dancer-right-container img {
+    height: 56.5rem;
+    opacity: 35%;
+    transition: 0.2s;
+}
+
+.main-content-container .dancers-container .dancer-right-container img:hover,
+.main-content-container .dancers-container .dancer-left-container img:hover {
+    opacity: 75%;
+}
+
+.main-content-container .classes-container .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-container .classes-container .title h1 {
+    margin: 0;
+    width: auto;
+    font-weight: 400;
+    font-size: 7.8rem;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.main-content-container .classes-container .classes-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-container .classes-container .classes-items-container article{
+    width: 37.1rem;
+    height: 32.2rem;
+
+    border-style: solid;
+    border-color: var(--color-secondary);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    margin: 0rem 3rem;
+
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.main-content-container .events-container .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-text-secondary);
+}
+
+.main-content-container .events-container .title h1 {
+    margin: 0;
+    width: auto;
+    font-weight: 400;
+    font-size: 7.8rem;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.main-content-container .events-container .events-items-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-container .events-container .events-items-container article{
+    width: 37.1rem;
+    height: 32.2rem;
+    color: var(--color-text-secondary);
+
+    border-style: solid;
+    border-color: var(--color-text-secondary);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    margin: 0rem 3rem;
+
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.main-content-container .classes-container .classes-items-container article .title {
+    font-size: 4rem;
+}
+
+.main-content-container .events-container .events-items-container article .title{
+    font-size: 4rem;
+}
