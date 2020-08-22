@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import {lighten} from 'polished';
+
 export const PageContainer = styled.div`
     width: 100vw;
     height: 100vh;
@@ -18,7 +20,7 @@ export const MainContainer = styled.main`
     background: 
         linear-gradient(
             ${props => props.theme.colors.backgroundBase}, 
-            ${props => props.theme.colors.backgroundSecondary});
+            ${props => lighten(0.11, props.theme.colors.backgroundBase)});
 
     h1 {
         width: 50vw;
