@@ -5,7 +5,7 @@ interface HeaderProps{
 }
 
 export const Header = styled.header<HeaderProps>`
-    width: 100vw;
+    width: 100%;
 
     ${({ size }) => {
             if (size === 'large') {
