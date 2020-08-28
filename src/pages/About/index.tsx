@@ -33,7 +33,9 @@ const About = () => {
                         </div>
                     </div>
                     <div className="right-teacher-info">
-                        <img src={DancerRightImage} alt="" className="right-teacher"/>
+                        <div className="right-teacher">
+                            <img src={DancerRightImage} alt=""/>
+                        </div>
                         <div className="right-teacher-text">
                             <h1>
                                 Raiza Latorraca! O Tribal Fusion Bellydance surgiu a partir do American Tribal Style (ATS) em meados dos anos 90 em São Francisco, Califórnia. Jill Parker, fundadora do Ultra Gypsy, primeiro grupo de Tribal Fusion, havia estudado American Tribal Style (ATS) com Carolena Nericcio
@@ -42,8 +44,8 @@ const About = () => {
                     </div>
                 </div>
 
+                <SectionDivider />
             </div>
-            <SectionDivider />
         </PageContainer>
     );
 };

@@ -19,14 +19,14 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
             </div>
             <BottomContainer>
                 <MenuContainer>
-                    <Link to="/about" >
-                        Sobre
-                    </Link>
-                    <Link to="/" >
+                    <Link to="/classes" >
                         Aulas
                     </Link>
                     <Link to="/" >
                         Eventos
+                    </Link>
+                    <Link to="/about" >
+                        Sobre
                     </Link>
                     <Link to="/" >
                         <img src={loginLinkIcon} alt="Login" className="login-icon"/>

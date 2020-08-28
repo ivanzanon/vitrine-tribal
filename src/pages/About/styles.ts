@@ -33,12 +33,16 @@ export const PageContainer = styled.main`
     }
 
     .founders {
-        height: 50rem
+        height: 50rem;
+        width: 100%;
     }
 
     .founders .left-teacher-info {
+        height: 100%;
+        
         img {
-            opacity: 50%;
+            height: 100%;
+            opacity: 30%;
         }
 
         .left-teacher-text {
@@ -56,9 +60,10 @@ export const PageContainer = styled.main`
 
             h1 {
                 font-family: 'Dosis', sans-serif;
+                text-align: left;
                 color: #000;
 
-                margin-left: 50rem;
+                margin: 0 5rem 0 25rem;
             }
         }
 
@@ -75,11 +80,20 @@ export const PageContainer = styled.main`
     .founders .right-teacher-info {
     
         margin-top: -50rem;
+        height: 100%;
 
-        img {
-            margin-left: 100rem;
-            opacity: 50%;
+        .right-teacher {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            
+            img {
+                height: 100%;
+                opacity: 30%;
+            }
         }
+
 
         .right-teacher-text {
             background-color: #FFF;
@@ -98,15 +112,17 @@ export const PageContainer = styled.main`
                 font-family: 'Dosis', sans-serif;
                 color: #000;
 
-                margin-right: 50rem;
+                text-align: right;
+
+                margin: 0 25rem 0 5rem;
             }
         }
 
-        img:hover {
+        .right-teacher img:hover {
             opacity: 100%;
         }
 
-        img:hover ~.right-teacher-text {
+        .right-teacher img:hover .right-teacher-text {
             opacity: 100%;
             margin-left: 0rem;
         }
