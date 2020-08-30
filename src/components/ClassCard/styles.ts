@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import {lighten} from 'polished';
 
-export const Card = styled.article`
-    width: 34rem;
+export const Arcticle = styled.article`
+
+    width: 100%;
     height: 30rem;
 
     border-style: solid;
@@ -10,8 +11,8 @@ export const Card = styled.article`
     border-color: ${props => lighten(0.08, props.theme.colors.secondary)};
 
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
-    
-    margin: 0rem 3rem;
+
+    margin-top: 2rem;
 
 `;
 
@@ -53,5 +54,3 @@ export const Date = styled(Text)`
     font-size: 3rem;
     font-weight: 400;
 `;
-
-

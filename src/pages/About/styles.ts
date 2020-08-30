@@ -5,12 +5,10 @@ export const PageContainer = styled.main`
     width: 100vw;
     height: 100vh;
 
-    max-width: 135rem;
-
-
     display: flex;
-
     flex-direction: column;
+
+    max-width: 135rem;
 
     color: ${props => props.theme.colors.primary};
 
