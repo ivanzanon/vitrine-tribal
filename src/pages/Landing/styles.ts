@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+import {lighten} from 'polished';
+
 export const PageContainer = styled.div`
     width: 100vw;
     height: 100vh;
+    max-width: 135rem;
 
     display: flex;
+    align-items: center;
 
     flex-direction: column;
 
@@ -13,12 +17,12 @@ export const PageContainer = styled.div`
 
 export const MainContainer = styled.main`
     height: 156.7rem;
-    width: 100vw;
+    width: 100%;
 
     background: 
         linear-gradient(
             ${props => props.theme.colors.backgroundBase}, 
-            ${props => props.theme.colors.backgroundSecondary});
+            ${props => lighten(0.11, props.theme.colors.backgroundBase)});
 
     h1 {
         width: 50vw;
@@ -32,7 +36,7 @@ export const MainContainer = styled.main`
 
 export const DancersContainer = styled.div`
     height: 20vw;
-    width: 100vw;
+    width: 100%;
     margin-top: 0rem;
 
     display: flex;

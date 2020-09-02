@@ -5,43 +5,57 @@ interface HeaderProps{
 }
 
 export const Header = styled.header<HeaderProps>`
-    width: 100vw;
+    width: 100%;
 
     ${({ size }) => {
             if (size === 'large') {
                 return(css`height: 26rem;`);
             } else {
-                return(css`height: 10rem;`);
+                return(css`height: 14rem;`);
             }
         }}
 
+    .title-container {
+        width: 90%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+
+        align-items: center;
+        padding: 1.6rem 0;
+
+        img {
+            ${({ size }) => {
+                if (size === 'large') {
+                    return(css`width: 20rem;
+                            margin-top: 0.2rem;`);
+                } else {
+                    return(css`width: 10rem;
+                            margin-top: 0.1rem;`);
+                }
+            }}
+        }
+
+        h1 {
+            ${({ size }) => {
+                if (size === 'large') {
+                    return(css`font-size: 8rem;`);
+                } else {
+                    return(css`font-size: 6rem;`);
+                }
+            }}
+            
+            font-weight: 100;
+            font-family: ${'Special Elite'}, sans-serif;
+            color: ${props => props.theme.colors.title};
+
+            margin-left: -7.5rem;
+            margin-top: 3rem;
+        }
+    }
+
     background-color: ${props => props.theme.colors.backgroundBase};
     color: ${props => props.theme.colors.primary};
-`;
-
-export const TitleContainer = styled.div`
-    width: 90%;
-    height: 90%;
-    margin: 0 auto;
-    display: flex;
-
-    align-items: center;
-    padding: 1.6rem 0;
-
-    img {
-        width: 20rem;
-        margin-top: 0.1rem;
-    }
-`;
-
-export const Title = styled.h1`
-    font-size: 8rem;
-    font-weight: 100;
-    font-family: ${'Special Elite'}, sans-serif;
-    color: ${props => props.theme.colors.title};
-
-    margin-left: -7.5rem;
-    margin-top: 3rem;
 `;
 
 export const BottomContainer = styled.div`

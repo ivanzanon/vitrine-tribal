@@ -2,7 +2,7 @@ import React from 'react';
 
 import headerBackgroundImage from '../../assets/images/HeaderBckGrnd.svg';
 import loginLinkIcon from '../../assets/images/icons/login.svg';
-import { Header, TitleContainer, BottomContainer, MenuContainer, Title } from './styles';
+import { Header, BottomContainer, MenuContainer } from './styles';
 import { Link } from 'react-router-dom';
 
 interface HeaderProps {
@@ -13,20 +13,20 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
 
     return(
         <Header size={size}>
-            <TitleContainer>
+            <div className="title-container">
                 <img src={headerBackgroundImage} alt="Flor Laranja"/>
-                <Title>Vitrine Tribal</Title>
-            </TitleContainer>
+                <h1>Vitrine Tribal</h1>
+            </div>
             <BottomContainer>
                 <MenuContainer>
-                    <Link to="/" >
-                        Sobre
-                    </Link>
-                    <Link to="/" >
+                    <Link to="/classes" >
                         Aulas
                     </Link>
                     <Link to="/" >
                         Eventos
+                    </Link>
+                    <Link to="/about" >
+                        Sobre
                     </Link>
                     <Link to="/" >
                         <img src={loginLinkIcon} alt="Login" className="login-icon"/>
