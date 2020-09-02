@@ -2,11 +2,11 @@ export default {
     title: 'standard',
 
     colors: {
-        backgroundDarker: '#113945',
-        backGroundDark: '#15525C',
-        backGround: '#1E5F62',
-        backGroundLight: '#257170',
-        backGroundLighter: '#2A817B',
+        backgroundDarker: '#121C2B',
+        backGroundDark: '#143543',
+        backGround: '#124D66',
+        backGroundLight: '#146F8C',
+        backGroundLighter: '#12A1C0',
 
         primaryDarker: '#4A4533',
         primaryDark: '#746737',
@@ -26,7 +26,7 @@ export default {
         openLight: '#FFB78E',
         openLighter: '#FFDECB',
         
-        title: '#9FA4A9',
+        title: '#B55A5C',
 
         primaryButton: '#DA642E',
         primaryButtonHover: '#C34B13',
@@ -39,10 +39,10 @@ export default {
     
     fonts: {
         // fontMainTitle: 'Special Elite',
+        fontMainTitle: 'Cutive Mono',
         // fontMainTitle: 'Andada',
-        fontMainTitle: 'Josefin Slab',
-        // fontSubTitle: 'Dosis',
-        fontSubTitle: 'Andada',
+        fontSubTitle: 'Dosis',
+        // fontSubTitle: 'Andada',
         fontText: 'Varta'
     }
 };

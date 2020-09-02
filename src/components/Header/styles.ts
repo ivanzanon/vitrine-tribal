@@ -7,6 +7,8 @@ interface HeaderProps{
 export const Header = styled.header<HeaderProps>`
     width: 100%;
 
+    background-color: ${props => props.theme.colors.backgroundDarker};
+
     ${({ size }) => {
             if (size === 'large') {
                 return(css`height: 26rem;`);
@@ -46,7 +48,7 @@ export const Header = styled.header<HeaderProps>`
             }}
             
             font-weight: 100;
-            font-family: ${'Special Elite'}, sans-serif;
+            font-family: ${props => props.theme.fonts.fontMainTitle}, sans-serif;
             color: ${props => props.theme.colors.title};
 
             margin-left: -7.5rem;
@@ -54,39 +56,55 @@ export const Header = styled.header<HeaderProps>`
         }
     }
 
-    background-color: ${props => props.theme.colors.backgroundBase};
-    color: ${props => props.theme.colors.primary};
+    .bottom-container {
+        width: 100%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .menu-container {
+
+            background-color: ${props => props.theme.colors.backgroundDarker};
+            color: ${props => props.theme.colors.primary};
+
+            height: 100%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-right: 3rem;
+
+            font-size: 3rem;
+            font-weight: 400;
+            font-family: ${ ({theme}) => theme.fonts.fontSubTitle}, sans-serif;
+
+            ${({ size }) => {
+                        if (size === 'small') {
+                            return(css`margin-top: -10rem;`);
+                        } else {
+                            return(css`margin-top: 0;`);
+                        }
+                    }}
+
+            a {
+                text-decoration: none;
+                color: ${props => props.theme.colors.primary};
+            }
+
+            a .login-icon {
+                height: 2.8rem;
+                fill: ${props => props.theme.colors.primary};
+                stroke: ${props => props.theme.colors.primary};
+            }
+        }
+    }
 `;
 
 export const BottomContainer = styled.div`
-    width: 100%;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
 `;
 
 export const MenuContainer = styled.div`
-    height: 100%;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    margin-right: 3rem;
-
-    font-size: 3rem;
-    font-weight: 400;
-    font-family: 'Dosis', sans-serif;
-
-    a {
-        text-decoration: none;
-        color: ${props => props.theme.colors.primary};
-    }
-
-    a .login-icon {
-        height: 2.8rem;
-        fill: ${props => props.theme.colors.primary};
-        stroke: ${props => props.theme.colors.primary};
-    }
 `;

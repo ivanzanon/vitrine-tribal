@@ -16,7 +16,7 @@ export const Card = styled.article`
 `;
 
 const Text = styled.h2`
-    font-family: 'Dosis', sans-serif;
+    font-family: ${props => props.theme.fonts.fontText}, sans-serif;
     color:  ${props => lighten(0.1, props.theme.colors.primary)};
 `;
 

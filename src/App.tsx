@@ -9,7 +9,7 @@ import Routes from './router';
 import { ThemeProvider } from 'styled-components';
 
 import standard from './assets/styles/themes/standard';
-import altBlueGreen from './assets/styles/themes/altBlueGreen';
+import standardBlue from './assets/styles/themes/standardBlue';
 
 import GlobalStyles from './assets/styles/global';
 

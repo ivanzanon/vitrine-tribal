@@ -17,8 +17,8 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
                 <img src={headerBackgroundImage} alt="Flor Laranja"/>
                 <h1>Vitrine Tribal</h1>
             </div>
-            <BottomContainer>
-                <MenuContainer>
+            <div className="bottom-container">
+                <div className="menu-container">
                     <Link to="/classes" >
                         Aulas
                     </Link>
@@ -31,8 +31,8 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
                     <Link to="/" >
                         <img src={loginLinkIcon} alt="Login" className="login-icon"/>
                     </Link>
-                </MenuContainer>
-            </BottomContainer>
+                </div>
+            </div>
         </Header>
     );
 }

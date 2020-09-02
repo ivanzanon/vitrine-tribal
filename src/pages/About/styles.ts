@@ -18,16 +18,16 @@ export const PageContainer = styled.main`
 
         background: 
             linear-gradient(
-                ${props => props.theme.colors.backgroundBase}, 
-                ${props => lighten(0.11, props.theme.colors.backgroundBase)});
+                ${props => props.theme.colors.backgroundDarker}, 
+                ${props => props.theme.colors.backGround});
     }
 
     .content {
-        font-family: 'Dosis', sans-serif;
-        font-size: 3.6rem;
+        font-family: ${props => props.theme.fonts.fontText}, sans-serif;
+        font-size: 2.8rem;
 
         text-align: justify;
-        margin: 8rem 6rem;
+        margin: 8rem 10rem;
     }
 
     .founders {
@@ -44,7 +44,7 @@ export const PageContainer = styled.main`
         }
 
         .left-teacher-text {
-            background-color: #FFF;
+            background-color: ${props => props.theme.colors.openLighter};
             height: 25rem;
             width: 100%;
 
@@ -57,11 +57,11 @@ export const PageContainer = styled.main`
             margin-left: -200rem;
 
             h1 {
-                font-family: 'Dosis', sans-serif;
+                font-family: ${props => props.theme.fonts.fontText}, sans-serif;
                 text-align: left;
                 color: #000;
 
-                margin: 0 5rem 0 25rem;
+                margin: 0 5rem 0 35rem;
             }
         }
 
@@ -94,7 +94,7 @@ export const PageContainer = styled.main`
 
 
         .right-teacher-text {
-            background-color: #FFF;
+            background-color: ${props => props.theme.colors.primaryLight};
             height: 25rem;
             width: 100%;
 
@@ -107,7 +107,7 @@ export const PageContainer = styled.main`
             margin-left: -200rem;
 
             h1 {
-                font-family: 'Dosis', sans-serif;
+                font-family: ${props => props.theme.fonts.fontText}, sans-serif;
                 color: #000;
 
                 text-align: right;

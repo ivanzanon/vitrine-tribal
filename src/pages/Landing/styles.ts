@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import {lighten} from 'polished';
-
 export const PageContainer = styled.div`
     width: 100vw;
     height: 100vh;
@@ -12,7 +10,7 @@ export const PageContainer = styled.div`
 
     flex-direction: column;
 
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primaryLight};
 `;
 
 export const MainContainer = styled.main`
@@ -21,8 +19,8 @@ export const MainContainer = styled.main`
 
     background: 
         linear-gradient(
-            ${props => props.theme.colors.backgroundBase}, 
-            ${props => lighten(0.11, props.theme.colors.backgroundBase)});
+            ${props => props.theme.colors.backgroundDarker}, 
+            ${props => props.theme.colors.backGround});
 
     h1 {
         width: 50vw;
@@ -58,13 +56,12 @@ export const Title = styled.section`
     margin-top: 5rem;
     margin-bottom: 2.5rem;
 
-
     h1 {
         margin: 0;
         width: auto;
         font-weight: 100;
         font-size: 5rem;
-        font-family: 'Dosis', sans-serif;
+        font-family: ${props => props.theme.fonts.fontSubTitle}, sans-serif;
     }
 `;
 

@@ -13,7 +13,7 @@ export const Title = styled.title`
     h1 {
 
         font-size: 8rem;
-        font-family: ${'Special Elite'}, sans-serif;
+        font-family: ${props => props.theme.fonts.fontMainTitle}, sans-serif;
         color: ${props => props.theme.colors.title};
 
         margin-left: 10rem;

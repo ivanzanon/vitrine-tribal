@@ -15,7 +15,7 @@ export const Card = styled.article`
 `;
 
 const Text = styled.h2`
-    font-family: 'Dosis', sans-serif;
+    font-family: ${props => props.theme.fonts.fontText}, sans-serif;
 `;
 
 export const Title = styled(Text)`

@@ -22,8 +22,8 @@ export const PageContainer = styled.main`
 
         background: 
             linear-gradient(
-                ${props => props.theme.colors.backgroundBase}, 
-                ${props => lighten(0.11, props.theme.colors.backgroundBase)});
+                ${props => props.theme.colors.backgroundDarker}, 
+                ${props => props.theme.colors.backGround});
 
         .list-of-classes {
             width: 80%;
