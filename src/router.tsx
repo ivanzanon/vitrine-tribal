@@ -5,6 +5,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Landing from "./pages/Landing";
 import About from './pages/About';
 import ClassesList from './pages/ClassesList';
+import Login from './pages/Login';
 
 const Routes = () => (
     <BrowserRouter>
@@ -13,6 +14,7 @@ const Routes = () => (
             
             <Route path="/about" component={About} />
             <Route path="/classes" component={ClassesList} />
+            <Route path="/login" component={Login} />
             {/* <Route exact path="/" component={Login} />
             <Route path="/main" component={Main} />
             <Route path="/form-event/:id" component={EventForm} />

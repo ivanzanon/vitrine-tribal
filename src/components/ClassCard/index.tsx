@@ -1,8 +1,10 @@
 import React from 'react';
-import { Arcticle, Title, Main, Infos, Description, Price, Date, Text, Teacher } from './styles';
+import { Arcticle, ClassName, Main, Infos, Teacher } from './styles';
+
+import { Text } from '../styled/display';
 
 import Thumb from "../../assets/images/thumb.png";
-import Register from "../../assets/images/icons/register.svg";
+import RegisterButton from '../RegisterButton';
 
 interface Class {
     title: string;
@@ -21,25 +23,32 @@ interface ClassProps {
 const ClassCard: React.FC<ClassProps> = ({ classInfo }) => {
     return (
         <Arcticle>
-            <Title>
-                <Text>{classInfo.title}</Text>
-            </Title>
+            <ClassName>
+                <Text size="2.5">{classInfo.title}</Text>
+            </ClassName>
             <Teacher>
                 <img src={Thumb} alt="foto da professora"/>
-                <Text className="teacher">{classInfo.teacher}</Text>
+                <Text size="4">{classInfo.teacher}</Text>
             </Teacher>
             <Main>
-                <Text>{classInfo.description}</Text>
+                <Text size="2">{classInfo.description}</Text>
             </Main>
             <Infos>
-                <Text className="date"> De {classInfo.date} até {classInfo.date}</Text>
-                <Text className="interval">{classInfo.interval}</Text>
-                <Text className="time">{classInfo.time}</Text>
-                <Text className="price">R$ {classInfo.price}</Text>
-                <a href="https://www.youtube.com/watch?v=HN1UjzRSdBk">
+                <Text size="2.5"> De {classInfo.date} até {classInfo.date}</Text>
+                <Text size="2">{classInfo.interval}</Text>
+                <Text size="2">{classInfo.time}</Text>
+                <Text size="3">R$ {classInfo.price}</Text>
+
+                <RegisterButton 
+                    label='Inscreva-se' 
+                    url='https://www.youtube.com/watch?v=HN1UjzRSdBk'
+                    color='#FFF'
+                />
+
+                {/* <a href="https://www.youtube.com/watch?v=HN1UjzRSdBk">
                     <img src={Register} alt="Caneta escrevendo em papel"/>
-                    <Text>Inscreva-se</Text>
-                </a>
+                    <Text size="2">Inscreva-se</Text>
+                </a> */}
             </Infos>
         </Arcticle>
     );

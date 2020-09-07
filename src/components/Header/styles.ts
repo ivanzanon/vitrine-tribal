@@ -38,7 +38,11 @@ export const Header = styled.header<HeaderProps>`
             }}
         }
 
-        h1 {
+        .title {
+            margin-left: -7.5rem;
+            margin-top: 3rem;
+        }
+        /* h1 {
             ${({ size }) => {
                 if (size === 'large') {
                     return(css`font-size: 8rem;`);
@@ -47,13 +51,12 @@ export const Header = styled.header<HeaderProps>`
                 }
             }}
             
-            font-weight: 100;
             font-family: ${props => props.theme.fonts.fontMainTitle}, sans-serif;
             color: ${props => props.theme.colors.title};
 
             margin-left: -7.5rem;
             margin-top: 3rem;
-        }
+        } */
     }
 
     .bottom-container {

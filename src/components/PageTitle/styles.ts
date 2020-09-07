@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Title = styled.title`
+export const PageTitleContainer = styled.title`
 
     width: 100%;
 
@@ -10,15 +10,7 @@ export const Title = styled.title`
 
     background-color: transparent;
 
-    h1 {
-
-        font-size: 8rem;
-        font-family: ${props => props.theme.fonts.fontMainTitle}, sans-serif;
-        color: ${props => props.theme.colors.title};
-
-        margin-left: 10rem;
-        margin-top: 8rem;
-
-    }
+    margin-left: 14rem;
+    margin-top: 8rem;
 
 `;

@@ -1,9 +1,14 @@
 import React from 'react';
-import {PageContainer} from './styles';
+
+import {PageContainer} from '../../components/PageContainer';
+import {Main} from '../../components/Main';
 import ClassCard from '../../components/ClassCard';
 import Header from '../../components/Header';
 import PageTitle from '../../components/PageTitle';
+
 import {getAllClasses} from '../../services/service';
+
+import { ListOfClasses } from "./styles";
 
 const ClassesList = () => {
 
@@ -12,16 +17,16 @@ const ClassesList = () => {
     return (
         <PageContainer>
             <Header size='small' />
-            <div className="main-container">
+            <Main>
                 <PageTitle>
                     Aulas
                 </PageTitle>
-                <div className="list-of-classes">
+                <ListOfClasses>
                     { 
                         classesInfo.map( classInfo => <ClassCard classInfo={classInfo} /> )
                     }
-                </div>
-            </div>
+                </ListOfClasses>
+            </Main>
         </PageContainer>
     );
 }

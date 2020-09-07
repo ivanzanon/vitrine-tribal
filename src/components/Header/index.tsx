@@ -2,7 +2,8 @@ import React from 'react';
 
 import headerBackgroundImage from '../../assets/images/HeaderBckGrnd.svg';
 import loginLinkIcon from '../../assets/images/icons/login.svg';
-import { Header, BottomContainer, MenuContainer } from './styles';
+import { Header } from './styles';
+import { Title } from '../styled/display';
 import { Link } from 'react-router-dom';
 
 interface HeaderProps {
@@ -11,11 +12,20 @@ interface HeaderProps {
 
 const MainHeader: React.FC<HeaderProps> = ({ size }) => {
 
+    const getTitleSize = (size:string) => {
+        if (size === 'large')
+            return "10"
+        else
+            return "6";
+    }
+
     return(
         <Header size={size}>
             <div className="title-container">
                 <img src={headerBackgroundImage} alt="Flor Laranja"/>
-                <h1>Vitrine Tribal</h1>
+                <div className="title">
+                    <Title size={getTitleSize(size)}>Vitrine Tribal</Title>
+                </div>
             </div>
             <div className="bottom-container">
                 <div className="menu-container">
@@ -28,7 +38,7 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
                     <Link to="/about" >
                         Sobre
                     </Link>
-                    <Link to="/" >
+                    <Link to="/login" >
                         <img src={loginLinkIcon} alt="Login" className="login-icon"/>
                     </Link>
                 </div>

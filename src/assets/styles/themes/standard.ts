@@ -8,11 +8,11 @@ export default {
         backGroundLight: '#257170',
         backGroundLighter: '#2A817B',
 
-        primaryDarker: '#4A4533',
-        primaryDark: '#746737',
-        primary: '#99884B',
-        primaryLight: '#BAAD7F',
-        primaryLighter: '#DACFA9',
+        primaryDarker: '#6A7C7D',
+        primaryDark: '#8F9C9D',
+        primary: '#B4BCBE',
+        primaryLight: '#D8DBDE',
+        primaryLighter: '#FDFBFE',
 
         secondaryDarker: '#3A0507',
         secondaryDark: '#5B0E10',

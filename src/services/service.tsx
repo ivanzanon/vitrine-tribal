@@ -1,3 +1,9 @@
+import { LoginInformation } from "../pages/Login/type";
+
+export function login(values:LoginInformation) {
+    alert(JSON.stringify(values, null, 4));
+}
+
 export function getAllClasses() {
     return [
         {
