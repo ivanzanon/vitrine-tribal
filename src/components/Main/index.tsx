@@ -10,7 +10,7 @@ export const Main = styled.main`
 
     background: 
         linear-gradient(
-            ${props => props.theme.colors.backgroundDarker}, 
-            ${props => props.theme.colors.backGround});
+            ${(props) => props.theme.colors.backgroundDarker}, 
+            ${(props) => props.theme.colors.backGround});
 
 `;

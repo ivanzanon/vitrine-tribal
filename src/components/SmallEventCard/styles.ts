@@ -6,7 +6,7 @@ export const Card = styled.article`
 
     border-style: solid;
     border-radius: 0.8rem;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: ${(props) => props.theme.colors.secondary};
 
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
     
@@ -15,7 +15,7 @@ export const Card = styled.article`
 `;
 
 const Text = styled.h2`
-    font-family: ${props => props.theme.fonts.fontText}, sans-serif;
+    font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
 `;
 
 export const Title = styled(Text)`
@@ -44,12 +44,10 @@ export const Description = styled(Text)`
 export const Price = styled(Text)`
     font-size: 3rem;
     font-weight: 700;
-    /* color: ${props => props.theme.colors.secondary} */
+    /* color: ${(props) => props.theme.colors.secondary} */
 `;
 
 export const Date = styled(Text)`
     font-size: 3rem;
     font-weight: 400;
 `;
-
-

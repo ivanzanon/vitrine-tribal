@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface HeaderProps{
     size: string;
@@ -7,15 +7,14 @@ interface HeaderProps{
 export const Header = styled.header<HeaderProps>`
     width: 100%;
 
-    background-color: ${props => props.theme.colors.backgroundDarker};
+    background-color: ${(props) => props.theme.colors.backgroundDarker};
 
     ${({ size }) => {
-            if (size === 'large') {
-                return(css`height: 26rem;`);
-            } else {
-                return(css`height: 14rem;`);
-            }
-        }}
+    if (size === 'large') {
+      return (css`height: 26rem;`);
+    }
+    return (css`height: 14rem;`);
+  }}
 
     .title-container {
         width: 90%;
@@ -28,14 +27,13 @@ export const Header = styled.header<HeaderProps>`
 
         img {
             ${({ size }) => {
-                if (size === 'large') {
-                    return(css`width: 20rem;
+    if (size === 'large') {
+      return (css`width: 20rem;
                             margin-top: 0.2rem;`);
-                } else {
-                    return(css`width: 10rem;
+    }
+    return (css`width: 10rem;
                             margin-top: 0.1rem;`);
-                }
-            }}
+  }}
         }
 
         .title {
@@ -44,15 +42,14 @@ export const Header = styled.header<HeaderProps>`
         }
         /* h1 {
             ${({ size }) => {
-                if (size === 'large') {
-                    return(css`font-size: 8rem;`);
-                } else {
-                    return(css`font-size: 6rem;`);
-                }
-            }}
+    if (size === 'large') {
+      return (css`font-size: 8rem;`);
+    }
+    return (css`font-size: 6rem;`);
+  }}
             
-            font-family: ${props => props.theme.fonts.fontMainTitle}, sans-serif;
-            color: ${props => props.theme.colors.title};
+            font-family: ${(props) => props.theme.fonts.fontMainTitle}, sans-serif;
+            color: ${(props) => props.theme.colors.title};
 
             margin-left: -7.5rem;
             margin-top: 3rem;
@@ -68,8 +65,8 @@ export const Header = styled.header<HeaderProps>`
 
         .menu-container {
 
-            background-color: ${props => props.theme.colors.backgroundDarker};
-            color: ${props => props.theme.colors.primary};
+            background-color: ${(props) => props.theme.colors.backgroundDarker};
+            color: ${(props) => props.theme.colors.primary};
 
             height: 100%;
             width: 40%;
@@ -81,25 +78,24 @@ export const Header = styled.header<HeaderProps>`
 
             font-size: 3rem;
             font-weight: 400;
-            font-family: ${ ({theme}) => theme.fonts.fontSubTitle}, sans-serif;
+            font-family: ${({ theme }) => theme.fonts.fontSubTitle}, sans-serif;
 
             ${({ size }) => {
-                        if (size === 'small') {
-                            return(css`margin-top: -10rem;`);
-                        } else {
-                            return(css`margin-top: 0;`);
-                        }
-                    }}
+    if (size === 'small') {
+      return (css`margin-top: -10rem;`);
+    }
+    return (css`margin-top: 0;`);
+  }}
 
             a {
                 text-decoration: none;
-                color: ${props => props.theme.colors.primary};
+                color: ${(props) => props.theme.colors.primary};
             }
 
             a .login-icon {
                 height: 2.8rem;
-                fill: ${props => props.theme.colors.primary};
-                stroke: ${props => props.theme.colors.primary};
+                fill: ${(props) => props.theme.colors.primary};
+                stroke: ${(props) => props.theme.colors.primary};
             }
         }
     }

@@ -7,9 +7,9 @@ export const InputContainer = styled.div`
 
 export const Label = styled.label`
 
-    font: ${props => props.theme.fonts.fontText};
+    font: ${({ theme }) => theme.fonts.fontText};
     font-size: 3rem;
-    color: ${props => props.theme.colors.primaryLight};
+    color: ${({ theme }) => theme.colors.primaryLight};
 
 `;
 
@@ -17,10 +17,10 @@ export const InputField = styled.input`
 
     height: 3rem;
     width: 100%;
-    border: 0.1rem solid ${props => props.theme.colors.secondaryLight};
+    border: 0.1rem solid ${({ theme }) => theme.colors.secondaryLight};
 
     :focus {
-        background: ${ ({theme}) => theme.colors.backGroundLighter}; 
+        background: ${({ theme }) => theme.colors.backGroundLighter}; 
     };
 
 `;

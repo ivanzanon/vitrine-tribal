@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PageContainer = styled.main`
     width: 100vw;
@@ -9,6 +9,6 @@ export const PageContainer = styled.main`
 
     max-width: 135rem;
 
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
 
 `;

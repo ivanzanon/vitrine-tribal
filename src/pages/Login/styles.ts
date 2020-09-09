@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const LoginContainer = styled.div`
 
@@ -14,8 +14,8 @@ export const LoginContainer = styled.div`
 
     background: 
         linear-gradient(
-            ${props => props.theme.colors.backgroundDarker}, 
-            ${props => props.theme.colors.backGround});
+            ${(props) => props.theme.colors.backgroundDarker}, 
+            ${(props) => props.theme.colors.backGround});
 
     .main {
         height: 90vh;
@@ -28,7 +28,7 @@ export const LoginContainer = styled.div`
         .logo-container {
             width: 50%;
             height: 100%;
-            border: 2px solid ${props => props.theme.colors.primary};
+            border: 2px solid ${(props) => props.theme.colors.primary};
             border-radius: 8px 0px 0px 8px;
 
             display: flex;
@@ -51,9 +51,9 @@ export const LoginContainer = styled.div`
             width: 50%;
             height: 100%;
 
-            background: ${props => props.theme.colors.primary};
+            background: ${(props) => props.theme.colors.primary};
 
-            border: 2px solid ${props => props.theme.colors.primary};
+            border: 2px solid ${(props) => props.theme.colors.primary};
             border-radius: 0px 8px 8px 0px;
 
             padding: 4rem;

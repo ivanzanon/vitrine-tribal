@@ -1,16 +1,14 @@
 import React from 'react';
+
 import { Title } from '../styled/display';
+import { PageTitleContainer } from './styles';
 
-import {PageTitleContainer} from './styles';
-
-const PageTitle: React.FC = (props) => {
-    return(
-        <PageTitleContainer>
-            <Title size="8" >
-                {props.children}
-            </Title>
-        </PageTitleContainer>
-    );
-}
+const PageTitle: React.FC = ({ children }) => (
+  <PageTitleContainer>
+    <Title size="8">
+      {children}
+    </Title>
+  </PageTitleContainer>
+);
 
 export default PageTitle;

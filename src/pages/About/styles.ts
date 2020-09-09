@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { lighten } from 'polished';
+import styled from 'styled-components';
 
 export const PageContainer = styled.main`
     width: 100vw;
@@ -10,7 +10,7 @@ export const PageContainer = styled.main`
 
     max-width: 135rem;
 
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
 
     .main-container {
         width: 100%;
@@ -18,12 +18,12 @@ export const PageContainer = styled.main`
 
         background: 
             linear-gradient(
-                ${props => props.theme.colors.backgroundDarker}, 
-                ${props => props.theme.colors.backGround});
+                ${(props) => props.theme.colors.backgroundDarker}, 
+                ${(props) => props.theme.colors.backGround});
     }
 
     .content {
-        font-family: ${props => props.theme.fonts.fontText}, sans-serif;
+        font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
         font-size: 2.8rem;
 
         text-align: justify;
@@ -44,7 +44,7 @@ export const PageContainer = styled.main`
         }
 
         .left-teacher-text {
-            background-color: ${props => props.theme.colors.openLighter};
+            background-color: ${(props) => props.theme.colors.openLighter};
             height: 25rem;
             width: 100%;
 
@@ -57,7 +57,7 @@ export const PageContainer = styled.main`
             margin-left: -200rem;
 
             h1 {
-                font-family: ${props => props.theme.fonts.fontText}, sans-serif;
+                font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
                 text-align: left;
                 color: #000;
 
@@ -94,7 +94,7 @@ export const PageContainer = styled.main`
 
 
         .right-teacher-text {
-            background-color: ${props => props.theme.colors.primaryLight};
+            background-color: ${(props) => props.theme.colors.primaryLight};
             height: 25rem;
             width: 100%;
 
@@ -107,7 +107,7 @@ export const PageContainer = styled.main`
             margin-left: -200rem;
 
             h1 {
-                font-family: ${props => props.theme.fonts.fontText}, sans-serif;
+                font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
                 color: #000;
 
                 text-align: right;

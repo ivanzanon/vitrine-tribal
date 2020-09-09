@@ -1,64 +1,64 @@
+import { Field, Form, Formik } from 'formik';
 import React from 'react';
-import { Field, Form, Formik,  } from 'formik';
+
+import Flor from '../../assets/images/flor.svg';
+import NavigationLink from '../../components/NavigationLink';
+import { Title } from '../../components/styled/display';
+import { Label, InputText } from '../../components/styled/forms';
+import SubmitButton from '../../components/SubmitButton';
+import { login } from '../../services/service';
 import { LoginContainer } from './styles';
 import { LoginInformation } from './type';
-import { login } from '../../services/service';
-import { Label, InputText } from '../../components/styled/forms';
-import Flor from '../../assets/images/flor.svg';
-import { Title } from '../../components/styled/display';
-import SubmitButton from '../../components/SubmitButton';
-import NavigationLink from '../../components/NavigationLink';
 
 const Login = () => {
+  const initialValues:LoginInformation = {
+    username: '',
+    password: '',
+  };
 
-    const initialValues:LoginInformation = { 
-                            username: "",
-                            password: ""
-                        };
+  const loginHandler = (values:LoginInformation) => {
+    login(values);
+  };
 
-    const loginHandler = (values:LoginInformation) => {
-        login(values);
-    };
+  return (
+    <LoginContainer>
+      <div className="main">
 
-    return(
-        <LoginContainer>
-            <div className="main">
+        <div className="logo-container">
+          <img src={Flor} alt="Flor de decoração" />
+          <Title size="8">Vitrine Tribal</Title>
+        </div>
 
-                <div className="logo-container">
-                    <img src={Flor} alt="Flor de decoração"/>
-                    <Title size="8">Vitrine Tribal</Title>
+        <div className="form-container">
+          <Title size="6">Login</Title>
+
+          <Formik
+            initialValues={initialValues}
+            onSubmit={(values, formikHelpers) => {
+              loginHandler(values);
+            }}
+          >
+            {({ values }) => (
+              <Form>
+                <div className="fields">
+                  <Label>Nome do usuário</Label>
+                  <Field name="username" as={InputText} />
+                  <Label>Senha</Label>
+                  <Field name="password" as={InputText} type="password" />
                 </div>
-
-                <div className="form-container">
-                    <Title size="6">Login</Title>
-
-                    <Formik 
-                        initialValues={initialValues} 
-                        onSubmit={(values, formikHelpers) => {
-                            loginHandler(values);
-                        }}
-                    >
-                        {({ values }) => (
-                            <Form>
-                                <div className="fields">
-                                    <Label>Nome do usuário</Label>
-                                    <Field name="username" as={InputText} />
-                                    <Label>Senha</Label>
-                                    <Field name="password" as={InputText} type="password" />
-                                </div>
-                                <div className="buttons">
-                                    <SubmitButton label="Login"/>
-                                    <NavigationLink label="Voltar" to="/"/>
-                                </div>
-                            </Form>
-                        )}                      
-
-                    </Formik>
+                <div className="buttons">
+                  <SubmitButton label="Login" />
+                  <NavigationLink label="Voltar" to="/" />
                 </div>
+              </Form>
+            )}
 
-            </div>
-        </LoginContainer>
-    );
-}
+          </Formik>
+        </div>
+
+      </div>
+    </LoginContainer>
+  );
+};
 
 export default Login;

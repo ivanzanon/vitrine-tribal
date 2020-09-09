@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {lighten} from 'polished';
 
 export const Arcticle = styled.article`
 
@@ -9,7 +8,7 @@ export const Arcticle = styled.article`
     border-style: solid;
     border-radius: 0.8rem;
     border-width: 0.2rem;
-    border-color: ${props => props.theme.colors.backgroundDarker};
+    border-color: ${(props) => props.theme.colors.backgroundDarker};
 
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
 
@@ -76,7 +75,7 @@ export const Infos = styled.aside`
 
         border-radius: 8px;
 
-        background-color: ${props => props.theme.colors.primaryButton};
+        background-color: ${(props) => props.theme.colors.primaryButton};
 
         text-decoration: none;
   

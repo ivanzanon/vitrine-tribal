@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PageContainer = styled.div`
     width: 100vw;
@@ -10,7 +10,7 @@ export const PageContainer = styled.div`
 
     flex-direction: column;
 
-    color: ${props => props.theme.colors.primaryLight};
+    color: ${(props) => props.theme.colors.primaryLight};
 `;
 
 export const MainContainer = styled.main`
@@ -19,8 +19,8 @@ export const MainContainer = styled.main`
 
     background: 
         linear-gradient(
-            ${props => props.theme.colors.backgroundDarker}, 
-            ${props => props.theme.colors.backGround});
+            ${(props) => props.theme.colors.backgroundDarker}, 
+            ${(props) => props.theme.colors.backGround});
 
     h1 {
         width: 50vw;
@@ -61,7 +61,7 @@ export const Title = styled.section`
         width: auto;
         font-weight: 100;
         font-size: 5rem;
-        font-family: ${props => props.theme.fonts.fontSubTitle}, sans-serif;
+        font-family: ${(props) => props.theme.fonts.fontSubTitle}, sans-serif;
     }
 `;
 
