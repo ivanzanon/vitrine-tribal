@@ -12,9 +12,13 @@ import NavigationLink from '../../components/NavigationLink';
 const Login = () => {
 
     const initialValues:LoginInformation = { 
-                            login: "",
+                            username: "",
                             password: ""
                         };
+
+    const loginHandler = (values:LoginInformation) => {
+        login(values);
+    };
 
     return(
         <LoginContainer>
@@ -31,14 +35,14 @@ const Login = () => {
                     <Formik 
                         initialValues={initialValues} 
                         onSubmit={(values, formikHelpers) => {
-                            login(values);
+                            loginHandler(values);
                         }}
                     >
                         {({ values }) => (
                             <Form>
                                 <div className="fields">
                                     <Label>Nome do usuário</Label>
-                                    <Field name="login" as={InputText} />
+                                    <Field name="username" as={InputText} />
                                     <Label>Senha</Label>
                                     <Field name="password" as={InputText} type="password" />
                                 </div>

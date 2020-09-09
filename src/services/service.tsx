@@ -1,7 +1,18 @@
 import { LoginInformation } from "../pages/Login/type";
 
-export function login(values:LoginInformation) {
+import api from './api';
+
+interface LoginResponse {
+    auth: boolean;
+    id: number;
+    token: string;
+}
+
+export async function login(values:LoginInformation) {
     alert(JSON.stringify(values, null, 4));
+    const response = await api.post('/login', values);
+    alert(JSON.stringify(response.data));
+    return (response.data);
 }
 
 export function getAllClasses() {
