@@ -1,6 +1,8 @@
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
+import { LoginRequest } from '../../@types/LoginData';
 import Flor from '../../assets/images/flor.svg';
 import NavigationLink from '../../components/NavigationLink';
 import { Title } from '../../components/styled/display';
@@ -8,16 +10,22 @@ import { Label, InputText } from '../../components/styled/forms';
 import SubmitButton from '../../components/SubmitButton';
 import { login } from '../../services/service';
 import { LoginContainer } from './styles';
-import { LoginInformation } from './type';
 
 const Login = () => {
-  const initialValues:LoginInformation = {
+  const history = useHistory();
+
+  const initialValues:LoginRequest = {
     username: '',
     password: '',
   };
 
-  const loginHandler = (values:LoginInformation) => {
-    login(values);
+  const loginHandler = async (values:LoginRequest) => {
+    const response = await login(values);
+    if (response) {
+      history.push('/home');
+    } else {
+      alert('Deu ruim');
+    }
   };
 
   return (
@@ -34,11 +42,11 @@ const Login = () => {
 
           <Formik
             initialValues={initialValues}
-            onSubmit={(values, formikHelpers) => {
+            onSubmit={(values) => {
               loginHandler(values);
             }}
           >
-            {({ values }) => (
+            {() => (
               <Form>
                 <div className="fields">
                   <Label>Nome do usuário</Label>

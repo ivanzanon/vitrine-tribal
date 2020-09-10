@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import About from './pages/About';
 import ClassesList from './pages/ClassesList';
+import HomeAdmin from './pages/HomeAdmin';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 
@@ -14,6 +15,8 @@ const Routes = () => (
       <Route path="/about" component={About} />
       <Route path="/classes" component={ClassesList} />
       <Route path="/login" component={Login} />
+
+      <Route path="/home" component={HomeAdmin} />
       {/* <Route exact path="/" component={Login} />
             <Route path="/main" component={Main} />
             <Route path="/form-event/:id" component={EventForm} />

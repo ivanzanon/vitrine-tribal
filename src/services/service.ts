@@ -1,17 +1,19 @@
-import { LoginInformation } from '../pages/Login/type';
+import { LoginRequest, LoginResponse } from '../@types/LoginData';
 import api from './api';
 
-interface LoginResponse {
-    auth: boolean;
-    id: number;
-    token: string;
-}
-
-export async function login(values:LoginInformation) {
-  alert(JSON.stringify(values, null, 4));
+export async function login(values:LoginRequest):Promise<boolean> {
   const response = await api.post('/login', values);
-  alert(JSON.stringify(response.data));
-  return (response.data);
+
+  const responseData:LoginResponse = (response.data);
+
+  if (responseData.auth) {
+    localStorage.setItem('tokenlabCalendar/userID', responseData.idUser);
+    localStorage.setItem('tokenlabCalendar/token', responseData.token);
+    alert('Logou');
+    return (true);
+  }
+  alert('Nem rolou');
+  return (false);
 }
 
 export function getAllClasses() {
