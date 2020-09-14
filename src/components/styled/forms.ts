@@ -13,7 +13,8 @@ export const InputText = styled.input`
     height: 3.5rem;
     width: 100%;
     border-radius: 8px;
-    border: 0rem solid ${(props) => props.theme.colors.secondaryLight};
+    border: 0rem solid ${({ theme }) => theme.colors.secondaryLight};
+    background: ${({ theme }) => theme.colors.primaryLighter};
     padding: 1rem;
 
     :focus {

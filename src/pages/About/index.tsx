@@ -2,14 +2,14 @@ import React from 'react';
 
 import DancerLeftImage from '../../assets/images/dancer01.png';
 import DancerRightImage from '../../assets/images/dancer02.png';
-import Header from '../../components/Header';
+import MainHeader from '../../components/MainHeader';
 import PageTitle from '../../components/PageTitle';
 import SectionDivider from '../../components/SectionDivider';
 import { PageContainer } from './styles';
 
 const About = () => (
   <PageContainer>
-    <Header size="small" />
+    <MainHeader size="small" />
     <div className="main-container">
       <PageTitle>
         Sobre o Tribal Fusion

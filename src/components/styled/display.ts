@@ -23,6 +23,8 @@ export const Title = styled.h1<TextProps>`
     font-size: ${(props) => props.size}rem;
     margin: ${(props) => props.margin};
 
+    font-weight: 400;
+
 `;
 
 export const SubTitle = styled.h1<TextProps>`
@@ -32,6 +34,14 @@ export const SubTitle = styled.h1<TextProps>`
     font-size: ${(props) => props.size};
     margin: ${(props) => props.margin};
 
+`;
+
+export const TextAlert = styled(Text)<TextProps>`
+    color: ${({ theme }) => theme.colors.secondaryLight};
+    font-weight: 400;
+
+    font-size: ${({ size }) => size};
+    margin: ${({ margin }) => margin};
 `;
 
 export const Button = styled.a`

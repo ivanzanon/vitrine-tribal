@@ -11,7 +11,7 @@ interface HeaderProps {
 }
 
 const MainHeader: React.FC<HeaderProps> = ({ size }) => {
-  const getTitleSize = (size:string) => {
+  const getTitleSize = () => {
     if (size === 'large') return '10';
     return '6';
   };
@@ -21,7 +21,7 @@ const MainHeader: React.FC<HeaderProps> = ({ size }) => {
       <div className="title-container">
         <img src={headerBackgroundImage} alt="Flor Laranja" />
         <div className="title">
-          <Title size={getTitleSize(size)}>Vitrine Tribal</Title>
+          <Title size={getTitleSize()}>Vitrine Tribal</Title>
         </div>
       </div>
       <div className="bottom-container">

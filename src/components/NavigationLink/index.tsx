@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom';
 import { StyledLink } from './styles';
 
 interface NavigationLinkProps {
-    to: string;
-    label: string;
+  to: string;
+  label: string;
+  height?: string;
+  width?: string,
+  color?: string;
 }
 
-const NavigationLink: React.FC<NavigationLinkProps> = ({ to, label }) => (
-  <StyledLink>
+const NavigationLink: React.FC<NavigationLinkProps> = ({
+  to, label, height, width, color,
+}) => (
+  <StyledLink height={height} width={width} color={color}>
     <Link to={to}>
-      {label}
+      <h1>{label}</h1>
     </Link>
   </StyledLink>
 );

@@ -1,5 +1,5 @@
 import { shade } from 'polished';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ButtonProps {
     height?: string;
@@ -26,8 +26,18 @@ export const Button = styled.input<ButtonProps>`
 
     border-radius: 8px;
 
-    background-color: ${(props) => (props.color ? props.color : props.theme.colors.primaryButton)};
-
+    ${({ color }) => {
+    if (color === 'yay') { return (css`background: ${({ theme }) => theme.colors.primaryButton};`); }
+    if (color === 'nay') {
+      return (
+        css`background: none; 
+            border: 1px solid ${({ theme }) => theme.colors.secondaryDark}; 
+            color: ${({ theme }) => theme.colors.secondaryDark};`
+      );
+    }
+    return (css`background: ${({ theme }) => theme.colors.primary}`);
+  }}
+   
     text-decoration: none;
     cursor: pointer;
 
@@ -35,11 +45,4 @@ export const Button = styled.input<ButtonProps>`
         height: 2rem;
         margin-right: 1rem;
     }
-
-    :hover {
-        background-color: ${(props) => (props.color
-    ? shade(0.1, props.color)
-    : shade(0.1, props.theme.colors.primaryButton))};
-    }
-
 `;

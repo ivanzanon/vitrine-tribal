@@ -21,6 +21,8 @@ export const LoginContainer = styled.div`
         height: 90vh;
         width: 80%;
 
+        max-height: 55rem;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -73,6 +75,13 @@ export const LoginContainer = styled.div`
                 align-items: center;
                 justify-content: space-around;
                 margin-top: 6rem;
+            }
+
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 4rem;
             }
         }
     }

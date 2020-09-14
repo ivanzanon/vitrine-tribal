@@ -1,23 +1,24 @@
 import React from 'react';
 
 import ClassCard from '../../components/ClassCard';
+import HeaderAdmin from '../../components/HeaderAdmin';
 import { Main } from '../../components/Main';
-import MainHeader from '../../components/MainHeader';
 import { PageContainer } from '../../components/PageContainer';
 import PageTitle from '../../components/PageTitle';
 import { getAllClasses } from '../../services/service';
 import { ListOfClasses } from './styles';
 
-const ClassesList = () => {
+const ClassesAdmin = () => {
   const classesInfo = getAllClasses();
 
   return (
     <PageContainer>
-      <MainHeader size="small" />
+      <HeaderAdmin size="small" />
       <Main>
         <PageTitle>
-          Aulas
+          Suas Aulas
         </PageTitle>
+
         <ListOfClasses>
           {
             classesInfo.map((classInfo) => <ClassCard classInfo={classInfo} />)
@@ -28,4 +29,4 @@ const ClassesList = () => {
   );
 };
 
-export default ClassesList;
+export default ClassesAdmin;

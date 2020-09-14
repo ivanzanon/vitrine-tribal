@@ -1,6 +1,18 @@
 import { LoginRequest, LoginResponse } from '../@types/LoginData';
 import api from './api';
 
+// Define the header for Authorization with the actual token
+const getTokenHeader = (token:string, id:string) => {
+  const authString = `Bearer ${token}`;
+
+  return {
+    headers: {
+      Authorization: authString,
+      id,
+    },
+  };
+};
+
 export async function login(values:LoginRequest):Promise<boolean> {
   const response = await api.post('/login', values);
 
@@ -9,11 +21,28 @@ export async function login(values:LoginRequest):Promise<boolean> {
   if (responseData.auth) {
     localStorage.setItem('tokenlabCalendar/userID', responseData.idUser);
     localStorage.setItem('tokenlabCalendar/token', responseData.token);
-    alert('Logou');
     return (true);
   }
-  alert('Nem rolou');
   return (false);
+}
+
+export async function getUserInfo() {
+  const id = localStorage.getItem('tokenlabCalendar/userID');
+  const token = localStorage.getItem('tokenlabCalendar/token');
+
+  if (token && id) {
+    const response = await api.get(`/users/${id}`, getTokenHeader(token, id));
+
+    const { fullname } = response.data;
+
+    return (
+      {
+        fullname,
+      }
+    );
+  }
+
+  return ({});
 }
 
 export function getAllClasses() {
