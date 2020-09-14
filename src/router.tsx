@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import About from './pages/About';
 import ClassesAdmin from './pages/ClassesAdmin';
 import ClassesList from './pages/ClassesList';
+import ClassForm from './pages/ClassForm';
 import HomeAdmin from './pages/HomeAdmin';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
@@ -19,6 +20,7 @@ const Routes = () => (
 
       <Route path="/home" component={HomeAdmin} />
       <Route path="/classes-manager" component={ClassesAdmin} />
+      <Route path="/class-form" component={ClassForm} />
       {/* <Route exact path="/" component={Login} />
             <Route path="/main" component={Main} />
             <Route path="/form-event/:id" component={EventForm} />

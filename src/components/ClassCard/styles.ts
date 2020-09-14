@@ -6,9 +6,12 @@ export const Arcticle = styled.article`
     height: 35rem;
 
     border-style: solid;
+    border-color: ${(props) => props.theme.colors.primaryLight};
     border-radius: 0.8rem;
     border-width: 0.2rem;
-    border-color: ${(props) => props.theme.colors.backgroundDarker};
+
+    background: ${({ theme }) => theme.colors.primary};
+    opacity: 70%;
 
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
 
@@ -43,6 +46,7 @@ export const Teacher = styled.section`
     img {
         height: 100%;
         margin: 2rem;
+        border: 0.2rem solid ${({ theme }) => theme.colors.primary};
         border-radius: 100px;
     }
 `;

@@ -3,16 +3,19 @@ import styled from 'styled-components';
 interface TextProps {
     size: string;
     margin?: string;
+    fontDark?: boolean;
 }
 
 export const Text = styled.h1<TextProps>`
 
     font-family: ${(props) => props.theme.fonts.fontText};
-    color: ${(props) => props.theme.colors.primaryLight};
+
+    color: ${({ theme, fontDark }) => (fontDark ? theme.colors.backgroundDarker : theme.colors.primaryLight)};
 
     font-size: ${(props) => props.size}rem;
     margin: ${(props) => props.margin};
 
+    font-weight: 400;
 `;
 
 export const Title = styled.h1<TextProps>`

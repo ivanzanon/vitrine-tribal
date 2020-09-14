@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ClassCard from '../../components/ClassCard';
-import { Main } from '../../components/Main';
+import Main from '../../components/Main';
 import MainHeader from '../../components/MainHeader';
 import { PageContainer } from '../../components/PageContainer';
 import PageTitle from '../../components/PageTitle';

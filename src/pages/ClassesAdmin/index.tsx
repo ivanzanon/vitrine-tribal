@@ -2,7 +2,8 @@ import React from 'react';
 
 import ClassCard from '../../components/ClassCard';
 import HeaderAdmin from '../../components/HeaderAdmin';
-import { Main } from '../../components/Main';
+import Main from '../../components/Main';
+import NavigationLink from '../../components/NavigationLink';
 import { PageContainer } from '../../components/PageContainer';
 import PageTitle from '../../components/PageTitle';
 import { getAllClasses } from '../../services/service';
@@ -18,7 +19,7 @@ const ClassesAdmin = () => {
         <PageTitle>
           Suas Aulas
         </PageTitle>
-
+        <NavigationLink to="class-form" label="Nova aula" />
         <ListOfClasses>
           {
             classesInfo.map((classInfo) => <ClassCard classInfo={classInfo} />)

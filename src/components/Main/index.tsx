@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
+const Main = styled.main`
     width: 100%;
     height: 500rem;
 
@@ -14,3 +14,5 @@ export const Main = styled.main`
             ${(props) => props.theme.colors.backGround});
 
 `;
+
+export default Main;

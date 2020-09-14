@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import ThumbImage from '../../assets/images/thumb.png';
 import HeaderAdmin from '../../components/HeaderAdmin';
-import { Main } from '../../components/Main';
+import Main from '../../components/Main';
 import NavigationLink from '../../components/NavigationLink';
 import { PageContainer } from '../../components/PageContainer';
 import { Title } from '../../components/styled/display';

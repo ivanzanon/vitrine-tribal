@@ -24,17 +24,17 @@ interface ClassProps {
 const ClassCard: React.FC<ClassProps> = ({ classInfo }) => (
   <Arcticle>
     <ClassName>
-      <Text size="2.5">{classInfo.title}</Text>
+      <Text fontDark size="2.5">{classInfo.title}</Text>
     </ClassName>
     <Teacher>
       <img src={Thumb} alt="foto da professora" />
-      <Text size="4">{classInfo.teacher}</Text>
+      <Text fontDark size="4">{classInfo.teacher}</Text>
     </Teacher>
     <Main>
-      <Text size="2">{classInfo.description}</Text>
+      <Text fontDark size="2">{classInfo.description}</Text>
     </Main>
     <Infos>
-      <Text size="2.5">
+      <Text fontDark size="2.5">
         {' '}
         De
         {classInfo.date}
@@ -42,9 +42,9 @@ const ClassCard: React.FC<ClassProps> = ({ classInfo }) => (
         até
         {classInfo.date}
       </Text>
-      <Text size="2">{classInfo.interval}</Text>
-      <Text size="2">{classInfo.time}</Text>
-      <Text size="3">
+      <Text fontDark size="2">{classInfo.interval}</Text>
+      <Text fontDark size="2">{classInfo.time}</Text>
+      <Text fontDark size="3">
         R$
         {classInfo.price}
       </Text>
@@ -54,11 +54,6 @@ const ClassCard: React.FC<ClassProps> = ({ classInfo }) => (
         url="https://www.youtube.com/watch?v=HN1UjzRSdBk"
         color="#FFF"
       />
-
-      {/* <a href="https://www.youtube.com/watch?v=HN1UjzRSdBk">
-                    <img src={Register} alt="Caneta escrevendo em papel"/>
-                    <Text size="2">Inscreva-se</Text>
-                </a> */}
     </Infos>
   </Arcticle>
 );
