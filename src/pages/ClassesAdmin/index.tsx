@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
+import CourseData from '../../@types/CourseData';
 import ClassCard from '../../components/ClassCard';
 import HeaderAdmin from '../../components/HeaderAdmin';
 import Main from '../../components/Main';
 import NavigationLink from '../../components/NavigationLink';
 import { PageContainer } from '../../components/PageContainer';
 import PageTitle from '../../components/PageTitle';
-import { getAllClasses } from '../../services/service';
+import { getClassesOfTeacher } from '../../services/service';
 import { ListOfClasses } from './styles';
 
-const ClassesAdmin = () => {
-  const classesInfo = getAllClasses();
+const ClassesAdmin:React.FC = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    async function getUserData() {
+      const listOfCourses = await getClassesOfTeacher();
+
+      setCourses(listOfCourses);
+    }
+
+    getUserData();
+  }, []);
 
   return (
     <PageContainer>
@@ -22,7 +33,7 @@ const ClassesAdmin = () => {
         <NavigationLink to="class-form" label="Nova aula" />
         <ListOfClasses>
           {
-            classesInfo.map((classInfo) => <ClassCard classInfo={classInfo} />)
+            courses.map((course:CourseData) => <ClassCard classInfo={course} isAdmin />)
           }
         </ListOfClasses>
       </Main>

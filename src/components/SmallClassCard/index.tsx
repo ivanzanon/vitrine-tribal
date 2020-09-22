@@ -1,19 +1,12 @@
 import React from 'react';
 
+import CourseData from '../../@types/CourseData';
 import {
   Card, Title, Teacher, Description, Date, Price,
 } from './styles';
 
-interface Class {
-    title: string;
-    teacher: string;
-    description: string;
-    price: number;
-    date: string;
-}
-
 interface ClassProps {
-    classInfo: Class;
+    classInfo: CourseData;
 }
 
 const SmallClassCard: React.FC<ClassProps> = ({ classInfo }) => (
@@ -25,7 +18,7 @@ const SmallClassCard: React.FC<ClassProps> = ({ classInfo }) => (
       R$
       {classInfo.price}
     </Price>
-    <Date>{classInfo.date}</Date>
+    <Date>{classInfo.dateStart}</Date>
   </Card>
 );
 

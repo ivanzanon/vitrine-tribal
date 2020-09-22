@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CourseData from '../../@types/CourseData';
 import belly01 from '../../assets/images/belly01.png';
 import belly03 from '../../assets/images/belly03.png';
 import belly04 from '../../assets/images/belly04.png';
@@ -18,21 +19,21 @@ const Landing = () => {
       teacher: 'Raiza',
       description: 'description 01',
       price: 150,
-      date: '01/01/2021',
+      dateStart: '01/01/2021',
     },
     {
       title: 'Aulão Gratuito Inaugural',
       teacher: 'Raiza',
       description: 'description 01',
       price: 2000,
-      date: '01/01/2021',
+      dateStart: '01/01/2021',
     },
     {
       title: 'Preparação dos quadris',
       teacher: 'Júlia',
       description: 'description 01',
       price: 250,
-      date: '01/01/2021',
+      dateStart: '01/01/2021',
     },
   ];
 
@@ -78,7 +79,7 @@ const Landing = () => {
         </Title>
         <ItemConteiner>
           {
-                        ClassesData.map((classData) => (
+                        ClassesData.map((classData:CourseData) => (
                           <SmallClassCard classInfo={classData} />
                         ))
                     }
