@@ -1,15 +1,12 @@
 import React from 'react';
 
 import CourseData from '../../@types/CourseData';
-import belly01 from '../../assets/images/belly01.png';
-import belly03 from '../../assets/images/belly03.png';
-import belly04 from '../../assets/images/belly04.png';
 import MainHeader from '../../components/MainHeader';
 import SectionDivider from '../../components/SectionDivider';
 import SmallClassCard from '../../components/SmallClassCard';
 import SmallEventCard from '../../components/SmallEventCard';
 import {
-  PageContainer, MainContainer, DancersContainer, Title, ItemConteiner,
+  PageContainer, MainContainer, DancersContainer, Title, ItemConteiner, Sentence,
 } from './styles';
 
 const Landing = () => {
@@ -64,14 +61,9 @@ const Landing = () => {
       <MainHeader size="large" />
 
       <MainContainer>
-        <h1>Frase sobre o Tribal Fusion que fala sobre ela em algumas palavras.</h1>
+        <Sentence>Frase sobre o Tribal Fusion que fala sobre ela em algumas palavras.</Sentence>
 
-        <SectionDivider />
-        <DancersContainer>
-          <img src={belly04} alt="" />
-          <img src={belly01} alt="" />
-          <img src={belly03} alt="" />
-        </DancersContainer>
+        <DancersContainer />
         <SectionDivider />
 
         <Title>

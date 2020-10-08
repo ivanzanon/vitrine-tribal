@@ -7,8 +7,9 @@ export const Card = styled.article`
 
     border-style: solid;
     border-radius: 0.8rem;
-    border-color: ${(props) => lighten(0.08, props.theme.colors.secondary)};
+    border-color: ${(props) => lighten(0.08, props.theme.colors.primaryLight)};
 
+    background: ${({ theme }) => theme.colors.primary};
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
     
     margin: 0rem 3rem;

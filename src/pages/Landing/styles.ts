@@ -22,14 +22,15 @@ export const MainContainer = styled.main`
             ${(props) => props.theme.colors.backgroundDarker}, 
             ${(props) => props.theme.colors.backGround});
 
-    h1 {
+`;
+
+export const Sentence = styled.h1`
         width: 50vw;
         font-family: ${'Srisakdi'}, cursive;
         font-weight: 400;
         margin-top: 1.5rem;
         margin-left: 10rem;
-        margin-bottom: 2.5rem
-    };
+        margin-bottom: 2.5rem    
 `;
 
 export const DancersContainer = styled.div`
