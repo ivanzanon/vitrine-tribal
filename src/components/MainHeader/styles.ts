@@ -78,7 +78,7 @@ export const Header = styled.header<HeaderProps>`
 
             font-size: 3rem;
             font-weight: 400;
-            font-family: ${({ theme }) => theme.fonts.fontSubTitle}, sans-serif;
+            font-family: ${({ theme }) => theme.fonts.fontMainTitle}, sans-serif;
 
             ${({ size }) => {
     if (size === 'small') {
@@ -90,12 +90,19 @@ export const Header = styled.header<HeaderProps>`
             a {
                 text-decoration: none;
                 color: ${(props) => props.theme.colors.primary};
+                transition: 0.2s;
+                border-radius: 5px;
+                padding: 0.8rem;
             }
 
             a .login-icon {
                 height: 2.8rem;
                 fill: ${(props) => props.theme.colors.primary};
                 stroke: ${(props) => props.theme.colors.primary};
+            }
+
+            a:hover {
+              background: ${(props) => props.theme.colors.primaryDarker};
             }
         }
     }

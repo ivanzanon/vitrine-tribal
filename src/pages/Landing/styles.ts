@@ -61,7 +61,7 @@ export const Title = styled.section`
         width: auto;
         font-weight: 100;
         font-size: 5rem;
-        font-family: ${(props) => props.theme.fonts.fontSubTitle}, sans-serif;
+        font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
     }
 `;
 
@@ -71,6 +71,6 @@ export const ItemConteiner = styled.section`
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 `;

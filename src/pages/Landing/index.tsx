@@ -64,7 +64,7 @@ const Landing = () => {
       <MainHeader size="large" />
 
       <MainContainer>
-        <h1>Frase spbre o Tribal Fusion que fala sobre ela em algumas palavras.</h1>
+        <h1>Frase sobre o Tribal Fusion que fala sobre ela em algumas palavras.</h1>
 
         <SectionDivider />
         <DancersContainer>
@@ -78,22 +78,18 @@ const Landing = () => {
           <h1>Aulas em destaque</h1>
         </Title>
         <ItemConteiner>
-          {
-                        ClassesData.map((classData:CourseData) => (
-                          <SmallClassCard classInfo={classData} />
-                        ))
-                    }
+          {ClassesData.map((classData:CourseData) => (
+            <SmallClassCard classInfo={classData} />
+          ))}
         </ItemConteiner>
 
         <Title>
           <h1>Eventos mais recentes</h1>
         </Title>
         <ItemConteiner>
-          {
-                    EventsData.map((eventData) => (
-                      <SmallEventCard eventInfo={eventData} />
-                    ))
-                }
+          {EventsData.map((eventData) => (
+            <SmallEventCard eventInfo={eventData} />
+          ))}
         </ItemConteiner>
       </MainContainer>
     </PageContainer>

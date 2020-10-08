@@ -30,7 +30,11 @@ const About = () => (
           <img src={DancerLeftImage} alt="" className="left-teacher" />
           <div className="left-teacher-text">
             <h1>
-              Júlia Gunesh! O Tribal Fusion Bellydance surgiu a partir do American Tribal Style (ATS) em meados dos anos 90 em São Francisco, Califórnia. Jill Parker, fundadora do Ultra Gypsy, primeiro grupo de Tribal Fusion, havia estudado American Tribal Style (ATS) com Carolena Nericcio
+              Júlia Gunesh! O Tribal Fusion Bellydance surgiu a partir do American Tribal Style
+              (ATS)
+              em meados dos anos 90 em São Francisco, Califórnia. Jill Parker, fundadora do Ultra
+              Gypsy, primeiro grupo de Tribal Fusion, havia estudado American Tribal Style (ATS)
+              com Carolena Nericcio
             </h1>
           </div>
         </div>
@@ -40,7 +44,10 @@ const About = () => (
           </div>
           <div className="right-teacher-text">
             <h1>
-              Raiza Latorraca! O Tribal Fusion Bellydance surgiu a partir do American Tribal Style (ATS) em meados dos anos 90 em São Francisco, Califórnia. Jill Parker, fundadora do Ultra Gypsy, primeiro grupo de Tribal Fusion, havia estudado American Tribal Style (ATS) com Carolena Nericcio
+              Raiza Latorraca! O Tribal Fusion Bellydance surgiu a partir do American
+              Tribal Style (ATS) em meados dos anos 90 em São Francisco, Califórnia.
+              Jill Parker, fundadora do Ultra Gypsy, primeiro grupo de Tribal Fusion,
+              havia estudado American Tribal Style (ATS) com Carolena Nericcio
             </h1>
           </div>
         </div>

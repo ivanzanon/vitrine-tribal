@@ -13,7 +13,14 @@ interface ButtonProps {
 const SubmitButton:React.FC<ButtonProps> = ({
   label, color, height, width, clickHandler,
 }) => (
-  <Button type="submit" onClick={clickHandler} value={label} color={color} height={height} width={width} />
+  <Button
+    type="submit"
+    onClick={clickHandler}
+    value={label}
+    color={color}
+    height={height}
+    width={width}
+  />
 );
 
 export default SubmitButton;

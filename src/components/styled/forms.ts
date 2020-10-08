@@ -32,3 +32,28 @@ export const InputText = styled.input`
     }
 
 `;
+
+export const InputArea = styled.input`
+
+    height: 15rem;
+    width: 100%;
+    border-radius: 8px;
+    border: 0rem solid ${({ theme }) => theme.colors.secondaryLight};
+    background: ${({ theme }) => theme.colors.primaryLighter};
+    padding: 1rem;
+
+    :focus {
+        border: 0;
+        background: ${({ theme }) => theme.colors.open}; 
+        outline: none;
+    };
+
+    :disabled {
+        background: ${({ theme }) => theme.colors.openLighter};
+    }
+
+    :invalid {
+        border: 0.3rem solid ${(props) => props.theme.colors.title}
+    }
+
+`;

@@ -3,10 +3,10 @@ import React from 'react';
 import CourseData from '../../@types/CourseData';
 import Thumb from '../../assets/images/thumb.png';
 import { deleteCourse } from '../../services/service';
-import NavigationLink from '../NavigationLink';
+import RoundNavigationButton from '../buttons/RoundNavigationButton';
+import RoundSubmitButton from '../buttons/RoundSubmitButton';
 import RegisterButton from '../RegisterButton';
 import { Text } from '../styled/display';
-import SubmitButton from '../SubmitButton';
 import {
   Arcticle, ClassName, Main, Infos, Teacher,
 } from './styles';
@@ -30,16 +30,15 @@ const ClassCard: React.FC<ClassProps> = ({ classInfo, isAdmin }) => {
       />
     )
     : (
-      <div>
-        <SubmitButton
+      <div className="controls">
+        <RoundSubmitButton
           label="Excluir"
           clickHandler={() => handleDeleteMethod(classInfo.id)}
-          color="#FFF"
+          color="yay"
         />
-        <NavigationLink
-          label=""
+        <RoundNavigationButton
           to="class-form"
-          color="#FFF"
+          color="yay"
         />
       </div>
     );

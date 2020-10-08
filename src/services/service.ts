@@ -61,7 +61,6 @@ export async function getAllClasses() {
 }
 
 export async function storeCourse(values:CourseData) {
-  alert(values);
   const { data } = await api.post('/courses', values);
 
   return (data);

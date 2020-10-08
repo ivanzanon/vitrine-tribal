@@ -10,7 +10,7 @@ export const CourseForm = styled.section`
         flex-direction: column;
 
         label {
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
         }
 
         input {
@@ -20,6 +20,37 @@ export const CourseForm = styled.section`
 
     .input-name {
         width: 50%;
+    }
+
+    .date {
+        width: 25%;    
+    }
+
+    .time {
+        width: 25%;    
+    }
+
+    .dates {
+        display: flex;
+        flex-direction: row;
+        
+        .field {
+            width: 20%;
+            margin-right: 5rem;
+        }
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .value {
+        width: 20%;
+    }
+
+    .description {
+        vertical-align: initial;
     }
 
 `;

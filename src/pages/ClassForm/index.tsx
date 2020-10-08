@@ -1,16 +1,19 @@
 import { Field, Form, Formik } from 'formik';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import CourseData from '../../@types/CourseData';
 import HeaderAdmin from '../../components/HeaderAdmin';
 import Main from '../../components/Main';
 import { PageContainer } from '../../components/PageContainer';
-import { InputText, Label } from '../../components/styled/forms';
+import { InputText, Label, InputArea } from '../../components/styled/forms';
 import SubmitButton from '../../components/SubmitButton';
 import { storeCourse } from '../../services/service';
 import { CourseForm } from './styles';
 
 const ClassForm = () => {
+  const history = useHistory();
+
   const initialValues:CourseData = {
     title: '',
     teacher: '5',
@@ -25,8 +28,8 @@ const ClassForm = () => {
   };
 
   function storeCourseHandler(values:CourseData) {
-    alert(values);
     storeCourse(values);
+    history.push('/classes-manager');
   }
 
   return (
@@ -46,24 +49,46 @@ const ClassForm = () => {
           >
             {() => (
               <Form>
-                <Label>Nome da Aula</Label>
-                <Field name="title" as={InputText} className="input-name" />
-                <Label>Data Início</Label>
-                <Field name="dateStart" as={InputText} type="date" />
-                <Label>Data Fim</Label>
-                <Field name="dateEnd" as={InputText} type="date" />
-                <Label>Hora Início</Label>
-                <Field name="hourStart" as={InputText} type="time" />
-                <Label>Hora Fim</Label>
-                <Field name="hourEnd" as={InputText} type="time" />
-                <Label>Valor</Label>
-                <Field name="price" as={InputText} type="currency" />
-                <Label>Descrição</Label>
-                <Field name="description" as={InputText} />
-                <Label>Intervalo</Label>
-                <Field name="interval" as={InputText} />
-                <Label>URL de Inscrição</Label>
-                <Field name="inscriptionUrl" as={InputText} />
+                <div className="field">
+                  <Label>Nome da aula</Label>
+                  <Field name="title" as={InputText} className="input-name" />
+                </div>
+                <div className="dates">
+                  <div className="field">
+                    <Label>Do dia</Label>
+                    <Field name="dateStart" as={InputText} type="date" />
+                  </div>
+                  <div className="field">
+                    <Label>até</Label>
+                    <Field name="dateEnd" as={InputText} type="date" />
+                  </div>
+                </div>
+                <div className="dates">
+                  <div className="field">
+                    <Label>Hora de início</Label>
+                    <Field name="hourStart" as={InputText} type="time" />
+                  </div>
+                  <div className="field">
+                    <Label>Hora de término</Label>
+                    <Field name="hourEnd" as={InputText} type="time" />
+                  </div>
+                </div>
+                <div className="field">
+                  <Label>Valor</Label>
+                  <Field name="price" as={InputText} type="currency" className="value" />
+                </div>
+                <div className="field">
+                  <Label>Descrição</Label>
+                  <Field name="description" as={InputArea} className="description" />
+                </div>
+                <div className="field">
+                  <Label>Intervalo</Label>
+                  <Field name="interval" as={InputText} />
+                </div>
+                <div className="field">
+                  <Label>URL de Inscrição</Label>
+                  <Field name="inscriptionUrl" as={InputText} />
+                </div>
                 <SubmitButton label="OK" color="yay" />
               </Form>
             )}

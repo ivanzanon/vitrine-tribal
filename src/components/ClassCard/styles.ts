@@ -68,24 +68,12 @@ export const Infos = styled.aside`
 
     margin: 4rem 2rem 4rem 2rem;
 
-    a {
-        height: 5rem;
-        width: 100%;
-
+    .controls{ 
+        width: 80%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-
-        border-radius: 8px;
-
-        background-color: ${(props) => props.theme.colors.primaryButton};
-
-        text-decoration: none;
-  
-        img {
-            height: 2rem;
-            margin-right: 1rem;
-        }
+        justify-content: space-around;
     }
+
 `;
