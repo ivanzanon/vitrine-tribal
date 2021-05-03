@@ -1,56 +1,79 @@
 import styled from 'styled-components';
-import {lighten} from 'polished';
 
 export const Arcticle = styled.article`
 
     width: 100%;
-    height: 30rem;
+    height: 35rem;
 
     border-style: solid;
+    border-color: ${(props) => props.theme.colors.primaryLight};
     border-radius: 0.8rem;
-    border-color: ${props => lighten(0.08, props.theme.colors.secondary)};
+    border-width: 0.2rem;
+
+    background: ${({ theme }) => theme.colors.primary};
+    opacity: 70%;
 
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
 
     margin-top: 2rem;
 
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20% 30% 50%;
+    grid-template-areas: "title title"
+                         "teacher infos"
+                         "main infos";
+
 `;
 
-const Text = styled.h2`
-    font-family: 'Dosis', sans-serif;
-    color:  ${props => lighten(0.1, props.theme.colors.primary)};
-`;
-
-export const Title = styled(Text)`
-    height: 8rem;
+export const ClassName = styled.header`
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
-    font-size: 3rem;
-    font-weight: 700;
-
-    padding: 0.5rem;
+    grid-area: title;    
 `;
 
-export const Teacher = styled(Text)`
-    font-size: 2.5rem;
-    font-weight: 400;
+export const Teacher = styled.section`
+    grid-area: teacher;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        height: 100%;
+        margin: 2rem;
+        border: 0.2rem solid ${({ theme }) => theme.colors.primary};
+        border-radius: 100px;
+    }
 `;
 
-export const Description = styled(Text)`
-    font-size: 2rem;
-    font-weight: 100;
+export const Main = styled.section`
+    grid-area: main;
+
+    padding: 2rem;
 `;
 
-export const Price = styled(Text)`
-    font-size: 3rem;
-    font-weight: 700;
-    /* color: ${props => props.theme.colors.secondary} */
-`;
+export const Infos = styled.aside`
+    grid-area: infos;
 
-export const Date = styled(Text)`
-    font-size: 3rem;
-    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin: 4rem 2rem 4rem 2rem;
+
+    .controls{ 
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
 `;

@@ -1,29 +1,44 @@
-import React from 'react';
-import {PageContainer} from './styles';
+import React, { useState, useEffect } from 'react';
+
+import CourseData from '../../@types/CourseData';
 import ClassCard from '../../components/ClassCard';
-import Header from '../../components/Header';
+import Main from '../../components/Main';
+import MainHeader from '../../components/MainHeader';
+import { PageContainer } from '../../components/PageContainer';
 import PageTitle from '../../components/PageTitle';
-import {getAllClasses} from '../../services/service';
+import { getAllClasses } from '../../services/service';
+import { ListOfClasses } from './styles';
 
-const ClassesList = () => {
+const ClassesList:React.FC = () => {
+  const [courses, setCourses] = useState([]);
 
-    const classesInfo = getAllClasses();
+  useEffect(() => {
+    async function getUserData() {
+      const listOfCourses = await getAllClasses();
 
-    return (
-        <PageContainer>
-            <Header size='small' />
-            <div className="main-container">
-                <PageTitle>
-                    Aulas
-                </PageTitle>
-                <div className="list-of-classes">
-                    { 
-                        classesInfo.map( classInfo => <ClassCard classInfo={classInfo} /> )
-                    }
-                </div>
-            </div>
-        </PageContainer>
-    );
-}
+      setCourses(listOfCourses);
+    }
+
+    getUserData();
+  }, []);
+
+  return (
+    <PageContainer>
+      <MainHeader size="small" />
+      <Main>
+        <PageTitle>
+          Aulas
+        </PageTitle>
+        <ListOfClasses>
+          {
+            courses.map(
+              (classInfo:CourseData) => <ClassCard classInfo={classInfo} />,
+            )
+          }
+        </ListOfClasses>
+      </Main>
+    </PageContainer>
+  );
+};
 
 export default ClassesList;

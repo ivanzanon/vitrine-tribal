@@ -1,5 +1,5 @@
+import { lighten } from 'polished';
 import styled from 'styled-components';
-import {lighten} from 'polished';
 
 export const Card = styled.article`
     width: 34rem;
@@ -7,8 +7,9 @@ export const Card = styled.article`
 
     border-style: solid;
     border-radius: 0.8rem;
-    border-color: ${props => lighten(0.08, props.theme.colors.secondary)};
+    border-color: ${(props) => lighten(0.08, props.theme.colors.primaryLight)};
 
+    background: ${({ theme }) => theme.colors.primary};
     box-shadow: 0px 4px 4px rgba(10, 10, 10, 0.25);
     
     margin: 0rem 3rem;
@@ -16,8 +17,8 @@ export const Card = styled.article`
 `;
 
 const Text = styled.h2`
-    font-family: 'Dosis', sans-serif;
-    color:  ${props => lighten(0.1, props.theme.colors.primary)};
+    font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
+    color:  ${(props) => lighten(0.1, props.theme.colors.primary)};
 `;
 
 export const Title = styled(Text)`
@@ -46,12 +47,10 @@ export const Description = styled(Text)`
 export const Price = styled(Text)`
     font-size: 3rem;
     font-weight: 700;
-    /* color: ${props => props.theme.colors.secondary} */
+    /* color: ${(props) => props.theme.colors.secondary} */
 `;
 
 export const Date = styled(Text)`
     font-size: 3rem;
     font-weight: 400;
 `;
-
-

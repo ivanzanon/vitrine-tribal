@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-import {lighten} from 'polished';
+import styled from 'styled-components';
 
 export const PageContainer = styled.div`
     width: 100vw;
@@ -12,7 +10,7 @@ export const PageContainer = styled.div`
 
     flex-direction: column;
 
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primaryLight};
 `;
 
 export const MainContainer = styled.main`
@@ -21,17 +19,18 @@ export const MainContainer = styled.main`
 
     background: 
         linear-gradient(
-            ${props => props.theme.colors.backgroundBase}, 
-            ${props => lighten(0.11, props.theme.colors.backgroundBase)});
+            ${(props) => props.theme.colors.backgroundDarker}, 
+            ${(props) => props.theme.colors.backGround});
 
-    h1 {
+`;
+
+export const Sentence = styled.h1`
         width: 50vw;
         font-family: ${'Srisakdi'}, cursive;
         font-weight: 400;
         margin-top: 1.5rem;
         margin-left: 10rem;
-        margin-bottom: 2.5rem
-    };
+        margin-bottom: 2.5rem    
 `;
 
 export const DancersContainer = styled.div`
@@ -58,13 +57,12 @@ export const Title = styled.section`
     margin-top: 5rem;
     margin-bottom: 2.5rem;
 
-
     h1 {
         margin: 0;
         width: auto;
         font-weight: 100;
         font-size: 5rem;
-        font-family: 'Dosis', sans-serif;
+        font-family: ${(props) => props.theme.fonts.fontText}, sans-serif;
     }
 `;
 
@@ -74,6 +72,6 @@ export const ItemConteiner = styled.section`
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 `;
